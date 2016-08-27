@@ -29,14 +29,13 @@ if(empty($nome)){
 	/*$email->IsSMTP();
 	$email->SMTPAuth = true;
 	$email->Port = 587;
-	$email->Host = "smtp.dozy.com.br";
-	
-	$email->Username = "falecom@dozy.com.br";
-	$email->Password = "hpjsmc011419";*/
+	$email->Host = "";	// servidor smtp
+	$email->Username = ""; nome de usuario
+	$email->Password = ""; senha  */ 
 	$email->IsMail();//para envio sem autenticação
-	$email->SetFrom ("falecom@dozy.com.br", "Hosiel"); // quem esta enviando
-	$email->AddAddress("falecom@dozy.com.br", "Hosiel"); // para quem sera enviado
-	$email->Subject = "Formulario de Contato";
+	$email->SetFrom ("seuemail@dominio.com", "Cleiton Correa"); // quem esta enviando
+	$email->AddAddress("seuemail@dominio.com", "Cleiton Correa"); // para quem sera enviado
+	$email->Subject = "Formulario de Contato com PHPMailer";
 
 	$body = "Nome:     ".$nome.               "<br />".
 			"Email:    ".$emailForm.          "<br />".
